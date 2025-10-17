@@ -540,6 +540,30 @@
   }
 }
 
+/* Style links in markdown content - white color for visibility */
+.markdown-body a,
+.chat-line a,
+.user-content a,
+.initial-content a,
+.tool-text a,
+.messages-list a,
+.chat-messages a {
+  color: #ffffff;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.markdown-body a:hover,
+.chat-line a:hover,
+.user-content a:hover,
+.initial-content a:hover,
+.tool-text a:hover,
+.messages-list a:hover,
+.chat-messages a:hover {
+  opacity: 0.8;
+}
+
 /* Constrain images rendered by marked.js to avoid overflow */
 .markdown-body img,
 .chat-line img,
@@ -553,6 +577,8 @@
   display: block;  /* avoid inline whitespace and better centering */
   max-height: 60vh; /* prevent extremely tall images from overwhelming the viewport */
   object-fit: contain; /* best-effort fit inside bounding box */
+  border-radius: 8px; /* slight rounding for softer appearance */
+  margin: 8px 0; /* vertical spacing */
 }
 
 /* If images are inside wide code blocks or tables, ensure containers wrap and remain scrollable */

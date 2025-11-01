@@ -146,12 +146,12 @@
                         <div class="status-icons">
                             <!-- Processing spinner SVG (fixed 24x24) -->
                             <svg class="status-processing" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="none" aria-hidden="true">
-                                <circle class="spinner-circle" cx="12" cy="12" r="9" stroke="#e5e5e5e5" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="40" stroke-dashoffset="10"></circle>
+                                <circle class="spinner-circle" cx="12" cy="12" r="9" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="40" stroke-dashoffset="10"></circle>
                             </svg>
                             <!-- Success: use provided good check SVG -->
-                            <svg class="status-success hidden" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#009600" aria-hidden="true"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>
+                            <svg class="status-success hidden" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" aria-hidden="true"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>
                             <!-- Error: use provided bad x SVG -->
-                            <svg class="status-error hidden" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="red" aria-hidden="true"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                            <svg class="status-error hidden" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" aria-hidden="true"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
                         </div>
                         <div class='tool-text'>
                             <p class='tool-title'>${escapeHtml(displayName)}</p>

@@ -27,8 +27,13 @@
   --chat-color-icon-muted: rgba(229, 229, 229, 0.9); /* Secondary icons */
   
   /* Semantic colors */
-  --chat-color-highlight: #007aff;      /* Primary actions */
+  --chat-color-highlight: white;      /* Primary actions */
   --chat-color-positive: #28a745;       /* Success states */
+  --chat-color-error: #ff637d;         /* Error / destructive states */
+  --chat-color-on-error: #ffffff;      /* Text color to use on error backgrounds */
+  /* CTA colors (defaults) - override in CUSTOM_CSS if you want different CTA) */
+  --chat-color-cta-bg: #ffffff;        /* Continue CTA background (bright) */
+  --chat-color-cta-text: #000000;      /* Continue CTA text color */
   --chat-color-price: #c9ffd1;         /* Special highlights */
   
   /* borders */
@@ -432,6 +437,7 @@
   transform-origin: 50% 50%;
   animation: spinner-rotate 900ms linear infinite;
   stroke-linecap: round;
+  stroke: var(--chat-color-text-primary);
 }
 
 @keyframes spinner-rotate {
@@ -440,7 +446,13 @@
 }
 
 .status-success { width: 24px; height: 24px; }
+.status-success path { fill: var(--chat-color-positive); }
 .status-error { width: 24px; height: 24px; }
+.status-error path { fill: var(--chat-color-error); }
+
+.status-processing {
+  color: var(--chat-color-text-primary);
+}
 
 /* Tool-call / function box UI */
 .tool-box {
@@ -823,4 +835,63 @@
 .disclaimer a {
   color: var(--chat-color-text-primary);
   text-decoration: underline;
+}
+
+/* Redirect tool specific styles */
+.redirect-text {
+  margin: 0 1px;
+}
+
+.redirect-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.redirect-btn {
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.redirect-btn:hover {
+  opacity: 0.8;
+}
+
+.redirect-continue {
+  /* Primary CTA: bright white background, dark text */
+  background: var(--chat-color-cta-bg);
+  color: var(--chat-color-cta-text);
+  border: 1px solid rgba(0,0,0,0.06);
+  /* Match Pause sizing and avoid bold text — keep CTA appearance but not oversized */
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
+
+.redirect-continue:hover {
+  filter: brightness(0.98);
+}
+
+.redirect-pause {
+  /* Secondary outlined button */
+  background: transparent;
+  color: var(--chat-color-text-primary);
+  border: 1px solid var(--chat-color-border-light);
+}
+
+.redirect-pause:hover {
+  background: var(--chat-color-background-hover);
+}
+
+.redirect-countdown {
+  font-weight: 700;
+  color: var(--chat-color-highlight);
 }

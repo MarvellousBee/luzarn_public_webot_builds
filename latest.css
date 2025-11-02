@@ -6,8 +6,10 @@
  *   --chat-color-text-primary: #ffffff !important;
  * }
  */
+
 .chatbot-wrapper {
   /* Base colors - Main surfaces and containers */
+  --chat-color-base: #1a1a1a;        /* Main background */
   --chat-color-background: #1a1a1a;        /* Main background */
   --chat-color-background-elevated: #202020;/* Message bubbles, cards */
   --chat-color-background-hover: rgba(255, 255, 255, 0.08); /* Hover states */
@@ -48,7 +50,7 @@
   right: 20px;
   width: 480px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background: rgba(26, 26, 26, 0.95);
+  background: var(--chat-color-base);
   border: 1px solid var(--chat-color-border);
   border-radius: 8px;
   box-shadow: 0 8px 32px var(--chat-shadow-color);
@@ -57,6 +59,30 @@
   overflow: hidden;
   z-index: 1000;
   backdrop-filter: blur(10px);
+}
+
+/* Floating circular launcher button (shown when widget is closed) */
+.chatbot-launcher {
+  --chat-launcher-color-background: #1a1a1a;
+  --chat-launcher-color-border: #333;
+  --chat-launcher-color-text-primary: #e0e0e0;
+  --chat-launcher-shadow-color: rgba(0, 0, 0, 0.3);
+
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid var(--chat-launcher-color-border);
+  background: var(--chat-launcher-color-background);
+  color: var(--chat-launcher-color-text-primary);
+  box-shadow: 0 8px 24px var(--chat-launcher-shadow-color);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
 }
 
 /* Markdown paragraphs are too wide without this */
@@ -301,25 +327,6 @@
     right: 5%;
     bottom: 10px;
   }
-}
-
-/* Floating circular launcher button (shown when widget is closed) */
-.chatbot-launcher {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  border: 1px solid var(--chat-color-border);
-  background: var(--chat-color-background);
-  color: var(--chat-color-text-primary);
-  box-shadow: 0 8px 24px var(--chat-shadow-color);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 1000;
 }
 
 .chatbot-launcher:hover {

@@ -59,6 +59,11 @@
   backdrop-filter: blur(10px);
 }
 
+/* Markdown paragraphs are too wide without this */
+.chat-line.ai > p {
+  margin: 3px 0;
+}
+
 /* Opening animation: fade + slight slide/scale in */
 .chatbot-wrapper.opening {
   animation: chatbotOpen 220ms cubic-bezier(0.22, 1, 0.36, 1) both;

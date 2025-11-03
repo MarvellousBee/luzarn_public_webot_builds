@@ -86,7 +86,7 @@
 }
 
 /* Markdown paragraphs are too wide without this */
-.chat-line.ai > p {
+.chat-message-element > p {
   margin: 3px 0;
 }
 
@@ -172,6 +172,7 @@
 }
 
 .chat-messages {
+  position: relative;
   flex: 1;
   padding: 16px;
   overflow-y: auto;

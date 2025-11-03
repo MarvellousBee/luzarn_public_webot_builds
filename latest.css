@@ -799,11 +799,9 @@
 
 /* .messages-follower */
 .messages-follower {
-  position: absolute;
-  left: 12px;
   top: 0;
   pointer-events: none;
-  transform: translateX(8px);
+  transform: translateX(8px) translateY(5px);
   display: none;
 }
 

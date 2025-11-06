@@ -392,6 +392,30 @@
   text-align: start;
 }
 
+@media (max-width: 600px) {
+  .suggestion-bubbles {
+    padding: 6px 12px;
+    gap: 6px;
+  }
+  
+  .suggestion-bubble {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .suggestion-bubbles {
+    padding: 4px 8px;
+    gap: 4px;
+  }
+  
+  .suggestion-bubble {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+}
+
 .suggestion-bubble:hover {
   opacity: 0.8;
 }
@@ -774,6 +798,33 @@
   text-align: center;
   gap: 20px;
   pointer-events: auto;
+}
+
+@media (max-width: 600px) {
+  .chatbot-landing-screen {
+    padding: 16px 12px;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .chatbot-landing-screen {
+    padding: 12px 8px;
+    gap: 8px;
+  }
+  
+  .chatbot-landing-screen h2 {
+    font-size: 18px;
+  }
+  
+  .chatbot-landing-screen p {
+    font-size: 13px;
+  }
+  
+  .landing-text {
+    max-width: 300px;
+    gap: 8px;
+  }
 }
 
 /* .landing-art */
